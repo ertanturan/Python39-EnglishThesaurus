@@ -1,0 +1,13 @@
+import json
+
+dataPath = "Data/data.json"
+data = json.load(open(dataPath))
+
+
+def translateWord(word):
+    return data[word]
+
+
+word = input("Enter word: ")
+
+print(translateWord(word))
