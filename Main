@@ -5,6 +5,7 @@ data = json.load(open(dataPath))
 
 
 def translateWord(word):
+    word = word.lower()
     if IsDataContainsWord(word)==True:
         print(data[word])
 
@@ -19,4 +20,4 @@ def IsDataContainsWord(word):
 
 word = input("Enter word: ")
 
-translateWord(word.lower())
+translateWord(word)
