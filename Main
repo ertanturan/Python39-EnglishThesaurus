@@ -5,9 +5,18 @@ data = json.load(open(dataPath))
 
 
 def translateWord(word):
-    return data[word]
+    if IsDataContainsWord(word)==True:
+        print(data[word])
+
+
+def IsDataContainsWord(word):
+    isContains = word in data
+    if isContains==False:
+        print("The word doesn't exist. Please check it and re-run")
+
+    return isContains
 
 
 word = input("Enter word: ")
 
-print(translateWord(word))
+translateWord(word)
