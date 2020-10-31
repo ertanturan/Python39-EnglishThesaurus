@@ -6,13 +6,13 @@ data = json.load(open(dataPath))
 
 def translateWord(word):
     word = word.lower()
-    if IsDataContainsWord(word)==True:
+    if IsDataContainsWord(word):
         print(data[word])
 
 
 def IsDataContainsWord(word):
     isContains = word in data
-    if isContains==False:
+    if not isContains:
         print("The word doesn't exist. Please check it and re-run")
 
     return isContains
