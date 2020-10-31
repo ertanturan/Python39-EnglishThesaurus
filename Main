@@ -19,4 +19,4 @@ def IsDataContainsWord(word):
 
 word = input("Enter word: ")
 
-translateWord(word)
+translateWord(word.lower())
