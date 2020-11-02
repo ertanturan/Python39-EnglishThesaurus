@@ -13,12 +13,15 @@ def printData(wordList):
 def translateWord(word):
     if IsDataContainsWord(word):
         printData(data[word])
+    elif IsDataContainsWord(word.title()):
+        printData(data[word.title()])
+    elif not IsDataContainsWord(word):
+        GetClosestMatches(word)
+
 
 
 def IsDataContainsWord(word):
     isContains = word in data
-    if not isContains:
-        GetClosestMatches(word)
     return isContains
 
 
@@ -36,6 +39,7 @@ def DidYouMean(word):
     if user_input=="y":
         translateWord(word)
     elif user_input=="n":
+
         exit(0)
     else:
         print("Didn't understand you... PLease retry ")
