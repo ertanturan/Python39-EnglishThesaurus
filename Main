@@ -31,7 +31,7 @@ def GetClosestMatches(word):
 
 
 def DidYouMean(word):
-    user_input = input(f"The word you entered couldn't be found. Did you mean {word} ? (y/n)")
+    user_input = input(f"The word you entered couldn't be found. Did you mean {word} ? (y/n) : ")
     user_input = user_input.lower()
     if user_input=="y":
         translateWord(word)
